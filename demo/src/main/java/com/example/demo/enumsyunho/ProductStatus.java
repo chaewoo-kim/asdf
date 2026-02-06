@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.enumsyunho;
 
 public enum ProductStatus {
     ON_SALE,       // 판매

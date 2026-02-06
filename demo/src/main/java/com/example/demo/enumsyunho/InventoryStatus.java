@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.enumsyunho;
 
 public enum InventoryStatus {
     AVAILABLE,      // 가용

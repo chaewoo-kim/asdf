@@ -1,6 +1,11 @@
-package com.example.demo;
+package com.example.demo.inventory;
 
+import com.example.demo.enumsyunho.InventoryStatus;
+import com.example.demo.products.Product;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -13,21 +18,29 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "supply_prices")
-public class SupplyPrice {
+@Table(name = "store_inventory")
+public class StoreInventory {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long supplyPriceId;
+    private Long inventoryId;
+
+    @Column
+    private String serialCode;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "product_id")
     private Product product;
 
-    private Integer supplyPrice;
+    private LocalDate manufactureDate;
+    private LocalDate expireDate;
 
-    private LocalDate startDate;
-    private LocalDate endDate;
+    private Long locationId;
+
+    @Enumerated(EnumType.STRING)
+    private InventoryStatus status;
+
+    private String boxCode;
 
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;

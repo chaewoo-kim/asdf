@@ -1,5 +1,8 @@
-package com.example.demo;
+package com.example.demo.logs;
 
+import com.example.demo.enumsyunho.LocationType;
+import com.example.demo.enumsyunho.LogType;
+import com.example.demo.products.Product;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;

@@ -1,5 +1,6 @@
-package com.example.demo;
+package com.example.demo.products;
 
+import com.example.demo.enumsyunho.ProductStatus;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
